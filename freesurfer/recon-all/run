@@ -41,20 +41,20 @@ if [[ -z $outputs ]]
         echo "Expected outputs were NOT found!"
         exit 1
     else
-        echo "Compressing outputs..."
+        echo "All good, leaving..."
 
-        # Set file permissions prior to compression
-        chmod -R 777 $SUBJECTS_DIR/*
+        # # Set file permissions prior to compression
+        # chmod -R 777 $SUBJECTS_DIR/*
 
-        # Compress the output to /tmp and name with current date and time
-        results_dir=/recon-all_results_$4/
-        mkdir $results_dir
+        # # Compress the output to /tmp and name with current date and time
+        # results_dir=/recon-all_results_$4/
+        # mkdir $results_dir
 
-        mv $SUBJECTS_DIR/* $results_dir
-        zip -r /$SUBJECTS_DIR/recon-all_results_$4`date +"_D%m-%d-%yT%H-%M"`.zip $results_dir
-        rm -rf $results_dir
+        # mv $SUBJECTS_DIR/* $results_dir
+        # zip -r /$SUBJECTS_DIR/recon-all_results_$4`date +"_D%m-%d-%yT%H-%M"`.zip $results_dir
+        # rm -rf $results_dir
         
-        chmod -R 777 $SUBJECTS_DIR
+        # chmod -R 777 $SUBJECTS_DIR
 fi
 
 exit 0
